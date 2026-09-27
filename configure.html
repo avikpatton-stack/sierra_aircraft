@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Configure | Sierra Aircraft SF-50 G1+</title>
+<title>Configure | Sierra Aircraft</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,24 +12,34 @@
 <nav><a href="index.html#aircraft">Aircraft</a><a href="configure.html">Configure</a><a href="index.html#experience">Experience</a><a href="index.html#training">Training</a><a href="index.html#support">Support</a><a href="index.html#stories">Stories</a></nav>
 <a class="cta" href="index.html#contact">Contact Sales</a>
 </header>
-<section class="pageHero"><p class="eyebrow">SIERRA CONFIGURATOR</p><h1>Make it your Sierra.</h1><p>Choose your SF-50 G1+ and exterior finish, then contact Sierra Sales to begin your order.</p></section>
-<main class="configurePage">
-<a class="backLink" href="index.html">← Back to Sierra Aircraft</a>
-<div class="configLayout">
-<div>
-<p class="eyebrow">AIRCRAFT</p>
-<h2>SF-50 G1+</h2>
-<p>The SF-50 G1+ is Sierra's pressurized light jet with VECTOR avionics, retractable landing gear and the HT-1050J turbofan.</p>
-<label>AIRCRAFT</label><select><option>SF-50 G1+</option></select>
-<label>EXTERIOR</label>
-<div class="colors">
-<button data-s="Snow">Snow</button><button data-s="Sport Red">Sport Red</button><button data-s="Evolution">Evolution</button><button data-s="Azure">Azure</button><button data-s="Obsidian">Obsidian</button><button data-s="Poseidon" class="selected">Poseidon</button><button data-s="Forest Green">Forest Green</button>
-</div>
-<a class="btn darkBtn" href="index.html#contact">Contact Sales</a>
-</div>
-<div class="preview"><img id="preview" src="Poseidon.png" alt="Configured SF-50"><div><b id="name">POSEIDON</b><span>SF-50 G1+</span></div></div>
-</div>
-</main>
+
+<section class="configLandingHero">
+  <img src="Base Profile Screenshot 2026.09.27 - 17.16.39.25.png" alt="Sierra SF-50 G1+ over the mountains">
+  <div class="shade"></div>
+  <div class="configLandingText">
+    <p class="eyebrow">SIERRA SF-50 G1+</p>
+    <h1>YOUR AIRCRAFT.<br>YOUR MISSION.</h1>
+    <p>Explore the SF-50 G1+ and create a configuration built around the way you fly.</p>
+    <a class="btn light" href="sf50-configurator.html">Start Configuration</a>
+  </div>
+</section>
+
+<section class="configIntro">
+  <p class="eyebrow">CONFIGURATION</p>
+  <h2>Start with the aircraft.<br>Make it yours.</h2>
+  <p>The Sierra configuration experience lets you select the SF-50 G1+ and choose from the full range of Sierra exterior finishes before connecting with our sales team.</p>
+</section>
+
+<section class="configFeature">
+  <div><img src="Poseidon.png" alt="Sierra SF-50 G1+ Poseidon"></div>
+  <div><p class="eyebrow">EXTERIOR FINISHES</p><h2>Seven ways to make an SF-50 yours.</h2><p>Choose from Snow, Sport Red, Evolution, Azure, Obsidian, Poseidon or Forest Green.</p><a class="textLink" href="sf50-configurator.html">View all finishes →</a></div>
+</section>
+
+<section class="configCTA">
+  <p class="eyebrow">READY?</p><h2>Let's build your Sierra.</h2>
+  <a class="btn darkBtn" href="sf50-configurator.html">Start Configuration</a>
+</section>
+
 <footer>
 <div class="logo">SIERRA <small>AIRCRAFT</small></div>
 <div><h4>Aircraft</h4><a href="index.html#aircraft">SF-50 G1+</a><a href="configure.html">Configure</a></div>
@@ -37,12 +47,5 @@
 <div><h4>Owners</h4><a href="index.html#support">Owner Portal</a><a href="index.html#support">Owner Resources</a><a href="index.html#support">Aircraft Manuals</a><a href="index.html#contact">Order & Delivery</a></div>
 <div><h4>Company</h4><a href="index.html#stories">Stories</a><a href="index.html#contact">Careers</a><a href="index.html#contact">Media</a><a href="index.html#contact">About Sierra</a></div>
 </footer>
-<script>
-const schemes={"Snow":"Snow.png","Sport Red":"Sport Red.png","Evolution":"Evolution.png","Azure":"Azure.png","Obsidian":"Obsidian.png","Poseidon":"Poseidon.png","Forest Green":"Forest Green.png"};
-document.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{
-document.querySelectorAll("[data-s]").forEach(x=>x.classList.remove("selected"));
-b.classList.add("selected");const s=b.dataset.s;
-document.getElementById("preview").src=schemes[s];document.getElementById("name").textContent=s.toUpperCase();
-});
-</script>
-</body></html>
+</body>
+</html>
