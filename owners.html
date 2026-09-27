@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Owner Portal | Sierra Aircraft</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.ownerHero{background:#111;color:#fff;padding:90px 9% 70px}.ownerHero h1{font-size:58px;line-height:1;margin:12px 0}.ownerHero p:not(.eyebrow){color:#aaa;font-size:17px;max-width:650px;line-height:1.6}
+.ownerMain{padding:75px 9%;background:#f5f5f5}.ownerTop{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}.ownerTop h2{font-size:38px;margin:8px 0}.ownerSearch{padding:13px 15px;border:1px solid #ccc;width:280px;background:#fff}
+.orders{display:grid;gap:18px}.orderCard{background:#fff;border:1px solid #ddd;padding:28px}.orderHead{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #eee;padding-bottom:18px;margin-bottom:20px}.orderHead h3{margin:0;font-size:22px}.status{font-size:10px;letter-spacing:1.5px;font-weight:bold;padding:8px 11px;background:#e8f4eb;color:#28623a;white-space:nowrap}.orderGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.orderGrid span{display:block;font-size:9px;letter-spacing:1.5px;color:#777;margin-bottom:6px}.orderGrid b{font-size:14px}.orderFoot{margin-top:22px;padding-top:18px;border-top:1px solid #eee;display:flex;justify-content:space-between;color:#666;font-size:13px}.empty{background:#fff;border:1px solid #ddd;padding:40px;text-align:center;color:#666;display:none}
+.ownerNote{margin-top:35px;font-size:12px;color:#777;line-height:1.6}
+@media(max-width:800px){.ownerHero h1{font-size:44px}.ownerTop{display:block}.ownerSearch{width:100%;margin-top:20px}.orderGrid{grid-template-columns:1fr 1fr}.orderHead{display:block}.status{display:inline-block;margin-top:12px}}
+</style>
+</head>
+<body>
+<header style="background:#111;position:relative">
+<a class="logo" href="index.html">SIERRA <small>AIRCRAFT</small></a>
+<nav><a href="index.html#aircraft">Aircraft</a><a href="configure.html">Configure</a><a href="index.html#experience">Experience</a><a href="index.html#training">Training</a><a href="index.html#support">Support</a><a href="index.html#stories">Stories</a></nav>
+<a class="cta" href="index.html#contact">Contact Sales</a>
+</header>
+
+<section class="ownerHero">
+<p class="eyebrow">SIERRA OWNER PORTAL</p>
+<h1>Aircraft & Orders.</h1>
+<p>View Sierra aircraft orders, delivery status, configuration details and owner information in one place.</p>
+</section>
+
+<main class="ownerMain">
+<div class="ownerTop">
+<div><p class="eyebrow">ORDERS</p><h2>All Sierra Orders</h2></div>
+<input id="search" class="ownerSearch" placeholder="Search order or aircraft..." aria-label="Search orders">
+</div>
+
+<div id="orders" class="orders">
+<article class="orderCard" data-search="6133BA N23989 SF-50 G1 Poseidon Kingston International delivered">
+<div class="orderHead"><div><p class="eyebrow">ORDER 6133BA</p><h3>SF-50 G1+ · N23989</h3></div><span class="status">DELIVERED</span></div>
+<div class="orderGrid">
+<div><span>EXTERIOR</span><b>Poseidon</b></div>
+<div><span>CABIN</span><b>6-seat modular</b></div>
+<div><span>ACCESSORY</span><b>Motorized pushback tug</b></div>
+<div><span>PAYMENT</span><b>Paid in full</b></div>
+<div><span>HOME BASE</span><b>Kingston International</b></div>
+<div><span>AIRCRAFT</span><b>SF-50 G1+</b></div>
+<div><span>REGISTRATION</span><b>N23989</b></div>
+<div><span>TRAINING</span><b>Kingston certification</b></div>
+</div>
+<div class="orderFoot"><span>Delivery status: Aircraft delivered to AKIA</span><span>Owner support available through Sierra</span></div>
+</article>
+</div>
+<div id="empty" class="empty">No orders match your search.</div>
+<p class="ownerNote">This portal currently displays the Sierra customer orders recorded in the website system. Additional orders can be added as they are placed and tracked.</p>
+</main>
+
+<footer>
+<div class="logo">SIERRA <small>AIRCRAFT</small></div>
+<div><h4>Aircraft</h4><a href="index.html#aircraft">SF-50 G1+</a><a href="configure.html">Configure</a></div>
+<div><h4>Service & Support</h4><a href="index.html#support">Support</a><a href="index.html#training">Training</a><a href="index.html#contact">Contact</a></div>
+<div><h4>Owners</h4><a href="owners.html">Owner Portal</a><a href="owners.html">Owner Resources</a><a href="owners.html">Aircraft Manuals</a><a href="index.html#contact">Order & Delivery</a></div>
+<div><h4>Company</h4><a href="index.html#stories">Stories</a><a href="index.html#contact">Careers</a><a href="index.html#contact">Media</a><a href="index.html#contact">About Sierra</a></div>
+</footer>
+
+<script>
+const search=document.getElementById("search"), card=document.querySelector(".orderCard"), empty=document.getElementById("empty");
+search.addEventListener("input",()=>{const q=search.value.toLowerCase().trim();const show=card.dataset.search.includes(q);card.style.display=show?"block":"none";empty.style.display=show?"none":"block";});
+</script>
+</body>
+</html>
