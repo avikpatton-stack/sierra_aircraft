@@ -10,7 +10,7 @@
 <header>
   <a class="logo" href="#">SIERRA <small>AIRCRAFT</small></a>
   <nav>
-    <a href="#aircraft">Aircraft</a><a href="#configure">Configure</a><a href="#experience">Experience</a>
+    <a href="#aircraft">Aircraft</a><a href="configure.html">Configure</a><a href="#experience">Experience</a>
     <a href="#training">Training</a><a href="#support">Support</a><a href="#stories">Stories</a>
   </nav>
   <a class="cta" href="#contact">Contact Sales</a>
@@ -18,15 +18,15 @@
 
 <main>
 <section class="hero">
-  <img id="hero" src="Base Profile Screenshot 2026.09.27 - 17.12.22.31.png" alt="Sierra SF-50 G1+">
+  <img id="hero" src="Base Profile Screenshot 2026.09.27 - 17.16.39.25.png" alt="Sierra SF-50 G1+ flying over the mountains">
   <div class="shade"></div>
   <div class="heroText">
     <p>SIERRA SF-50 G1+</p>
     <h1>GO FURTHER.<br>FLY SIERRA.</h1>
     <span>A personal light jet designed for the way you travel.</span>
-    <div><a class="btn light" href="#aircraft">Explore SF-50</a><a class="btn outline" href="#configure">Configure Yours</a></div>
+    <div><a class="btn light" href="#aircraft">Explore SF-50</a><a class="btn outline" href="configure.html">Configure Yours</a></div>
   </div>
-  <div class="heroDots" id="heroDots"></div>
+  
 </section>
 
 <section id="aircraft" class="intro">
@@ -54,19 +54,7 @@
   <div class="avionicsText"><p class="eyebrow">VECTOR AVIONICS</p><h2>A cockpit built around the pilot.</h2><p>The SF-50 G1+ features Sierra's VECTOR flight deck with integrated primary flight and navigation information in a compact, pilot-focused cockpit.</p><a class="textLink" href="#contact">Learn more about the SF-50 →</a></div>
 </section>
 
-<section id="configure" class="configure">
-  <div>
-    <p class="eyebrow">CONFIGURE</p><h2>Make it<br>your Sierra.</h2>
-    <label>AIRCRAFT</label><select><option>SF-50 G1+</option></select>
-    <label>EXTERIOR</label>
-    <div class="colors">
-      <button data-s="Snow">Snow</button><button data-s="Sport Red">Sport Red</button><button data-s="Evolution">Evolution</button>
-      <button data-s="Azure">Azure</button><button data-s="Obsidian">Obsidian</button><button data-s="Poseidon" class="selected">Poseidon</button><button data-s="Forest Green">Forest Green</button>
-    </div>
-    <a class="btn darkBtn" href="#contact">Contact Sales</a>
-  </div>
-  <div class="preview"><img id="preview" src="Poseidon.png" alt="Configured SF-50"><div><b id="name">POSEIDON</b><span>SF-50 G1+</span></div></div>
-</section>
+
 
 <section id="training" class="split">
   <img src="Base Profile Screenshot 2026.09.27 - 17.18.28.24.png" alt="SF-50">
@@ -99,32 +87,15 @@
 
 <footer>
   <div class="logo">SIERRA <small>AIRCRAFT</small></div>
-  <div><h4>Aircraft</h4><a href="#aircraft">SF-50 G1+</a><a href="#configure">Configure</a></div>
+  <div><h4>Aircraft</h4><a href="#aircraft">SF-50 G1+</a><a href="configure.html">Configure</a></div>
   <div><h4>Service & Support</h4><a href="#support">Support</a><a href="#training">Training</a><a href="#contact">Contact</a></div>
   <div><h4>Owners</h4><a href="#support">Owner Portal</a><a href="#support">Owner Resources</a><a href="#support">Aircraft Manuals</a><a href="#contact">Order & Delivery</a></div>
   <div><h4>Company</h4><a href="#stories">Stories</a><a href="#contact">Careers</a><a href="#contact">Media</a><a href="#contact">About Sierra</a></div>
 </footer>
 
 <script>
-const schemes={"Snow":"Snow.png","Sport Red":"Sport Red.png","Evolution":"Evolution.png","Azure":"Azure.png","Obsidian":"Obsidian.png","Poseidon":"Poseidon.png","Forest Green":"Forest Green.png"};
-const heroImages=[
-"Base Profile Screenshot 2026.09.27 - 17.12.22.31.png",
-"Base Profile Screenshot 2026.09.27 - 17.16.39.25.png",
-"Base Profile Screenshot 2026.09.27 - 17.18.28.24.png",
-"Base Profile Screenshot 2026.09.27 - 17.21.08.29.png",
-"Base Profile Screenshot 2026.09.27 - 17.22.26.82.png"
-];
-const hero=document.getElementById("hero"), dots=document.getElementById("heroDots");
-heroImages.forEach((_,i)=>{const d=document.createElement("button");d.className=i===0?"active":"";d.setAttribute("aria-label","Hero image "+(i+1));d.onclick=()=>showHero(i);dots.appendChild(d)});
-let heroIndex=0;
-function showHero(i){heroIndex=i;hero.classList.remove("fade");void hero.offsetWidth;hero.src=heroImages[i];hero.classList.add("fade");[...dots.children].forEach((d,n)=>d.classList.toggle("active",n===i))}
-setInterval(()=>showHero((heroIndex+1)%heroImages.length),6000);
-
-document.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{
-  document.querySelectorAll("[data-s]").forEach(x=>x.classList.remove("selected"));
-  b.classList.add("selected");let s=b.dataset.s;
-  document.getElementById("preview").src=schemes[s];document.getElementById("name").textContent=s.toUpperCase();
-});
+const hero=document.getElementById("hero");
+hero.style.opacity="1";
 </script>
 </body>
 </html>
